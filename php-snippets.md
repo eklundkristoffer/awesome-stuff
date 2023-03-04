@@ -2,6 +2,7 @@
 > Credit: https://twitter.com/michaeldyrynda/status/1629702214917980166
 ```php
 use Carbon\CarbonInterval;
+use Carbon\Carbon;
 
 CarbonInterval::seconds(108)
   ->cascade()
@@ -14,4 +15,13 @@ CarbonInterval::minutes(108)
 CarbonInterval::hours(108)
   ->cascade()
   ->forHumans(); // 4 days 12 hours
+
+//
+// With locale
+//
+Carbon::setLocale('es');
+
+CarbonInterval::hours(108)
+  ->cascade()
+  ->forHumans(); // 4 días 12 horas
 ```
